@@ -10,14 +10,14 @@ function CV() {
           Mon CV
         </h2>
 
-        <p className="text-lg text-gray-400 mb-6">
+        <p className="text-lg  mb-6">
           Je suis une développeuse web junior orientée front-end, avec un intérêt
           particulier pour la création d’interfaces modernes, accessibles et
           responsives. J’aime transformer des maquettes en expériences utilisateur
           fluides et soignées.
         </p>
 
-        <p className="text-gray-400 mb-8">
+        <p className=" mb-8">
           Actuellement, je développe des projets personnels en <strong>React</strong> et
           <strong> Symfony</strong> afin de consolider mes compétences et de me rapprocher
           des pratiques professionnelles du développement web.
@@ -25,13 +25,13 @@ function CV() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-              href="/CV_BintouSYLLA.pdf" download className="btn btn-accent text-white"
+              href="/CV_BintouSYLLA.pdf" download className="btn btn-primary text-white"
           >
             Télécharger mon CV
           </a>
 
           <a
-            href={`${import.meta.env.BASE_URL}CV_BintouSYLLA.pdf`}
+            href="/CV_BintouSYLLA.pdf"
             target="_blank"
             className="btn btn-outline"
           >

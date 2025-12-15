@@ -35,7 +35,7 @@ function Contact() {
           Me contacter
         </h2>
 
-        <p className="text-lg text-gray-400 mb-10">
+        <p className="text-lg  mb-10">
           Une question, une opportunité ou simplement envie d’échanger ?
         </p>
 
@@ -68,7 +68,7 @@ function Contact() {
           {success && <p className="text-success">{success}</p>}
           {error && <p className="text-error">{error}</p>}
 
-          <button className="btn btn-accent text-white">
+          <button className="btn btn-secondary text-white">
             Envoyer le message
           </button>
 

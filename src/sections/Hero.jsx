@@ -20,7 +20,7 @@ function Hero() {
       <div className="flex flex-col sm:flex-row gap-4 mt-8">
         <a
           href="#projects"
-          className="btn btn-error text-white text-base sm:text-lg"
+          className="btn btn-primary text-white text-base sm:text-lg"
         >
           Voir mon travail
         </a>
