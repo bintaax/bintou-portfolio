@@ -25,13 +25,13 @@ function CV() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-              href="/CV_BintouSYLLA.pdf" download className="btn btn-primary text-white"
+              href={`${import.meta.env.BASE_URL}CV_BintouSYLLA.pdf`} download className="btn btn-primary text-white"
           >
             Télécharger mon CV
           </a>
 
           <a
-            href="/CV_BintouSYLLA.pdf"
+            href={`${import.meta.env.BASE_URL}CV_BintouSYLLA.pdf`}
             target="_blank"
             className="btn btn-outline"
           >
