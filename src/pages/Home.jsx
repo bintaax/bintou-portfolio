@@ -1,6 +1,7 @@
 import Hero from "../sections/Hero"
+import Stacks from "../sections/Stacks"
 import Projects from "../sections/Projects"
-import CV from "../sections/CV"
+
 import Contact from "../sections/Contact"
 
 
@@ -8,8 +9,8 @@ function Home() {
   return (
     <>
       <Hero />
+      <Stacks />
       <Projects />
-      <CV />
       <Contact />
     </>
   )

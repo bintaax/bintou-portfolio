@@ -1,83 +1,96 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
-function Contact() {
-  const [success, setSuccess] = useState(null)
-  const [error, setError] = useState(null)
+export default function Contact() {
+  const [status, setStatus] = useState({ type: null, message: "" })
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setSuccess(null)
-    setError(null)
+    setLoading(true)
+    setStatus({ type: null, message: "" })
 
     const formData = new FormData(e.target)
 
-    const response = await fetch("https://formspree.io/f/mjknljrg", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-      },
-      body: formData,
-    })
+    try {
+      const response = await fetch("https://formspree.io/f/mjknljrg", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData,
+      })
 
-    if (response.ok) {
-      setSuccess("Message envoyé avec succès ✨")
-      e.target.reset()
-    } else {
-      setError("Impossible d’envoyer le message")
+      if (response.ok) {
+        setStatus({ type: "success", message: "Demande transmise avec succès. Je vous réponds sous peu. ✨" })
+        e.target.reset()
+      } else {
+        setStatus({ type: "error", message: "Une erreur est survenue lors de l'envoi." })
+      }
+    } catch (err) {
+      setStatus({ type: "error", message: "Le service de messagerie est indisponible." })
+    } finally {
+      setLoading(false)
     }
   }
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-24 bg-white text-slate-900">
       <div className="max-w-3xl">
-
-        <h2 className="text-3xl font-bold mb-6">
-          Me contacter
+        <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
+          <span className="text-primary text-4xl">/</span> Contact
         </h2>
-
-        <p className="text-lg  mb-10">
-          Une question, une opportunité ou simplement envie d’échanger ?
+        <p className="text-slate-500 mb-12 text-lg">
+          Une collaboration en vue ? N'hésitez pas à m'envoyer un message.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="relative border-b-2 border-slate-100 focus-within:border-primary transition-all">
+              <label className="block text-xs font-bold uppercase text-slate-400 mb-1">Nom complet</label>
+              <input 
+                name="name"
+                type="text" 
+                placeholder="Ex: Sylla Bintou" 
+                className="w-full py-2 bg-transparent outline-none text-slate-800 placeholder:text-slate-200" 
+                required 
+              />
+            </div>
+            
+            <div className="relative border-b-2 border-slate-100 focus-within:border-primary transition-all">
+              <label className="block text-xs font-bold uppercase text-slate-400 mb-1">Email</label>
+              <input 
+                name="email"
+                type="email" 
+                placeholder="exemple@domaine.com" 
+                className="w-full py-2 bg-transparent outline-none text-slate-800 placeholder:text-slate-200" 
+                required 
+              />
+            </div>
+          </div>
+          
+          <div className="relative border-b-2 border-slate-100 focus-within:border-primary transition-all">
+            <label className="block text-xs font-bold uppercase text-slate-400 mb-1">Votre projet</label>
+            <textarea 
+              name="message"
+              placeholder="Décrivez votre demande..." 
+              className="w-full py-2 bg-transparent outline-none text-slate-800 h-32 resize-none placeholder:text-slate-200" 
+              required 
+            />
+          </div>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Ton nom"
-            className="input input-bordered w-full"
-            required
-          />
+          {status.message && (
+            <div className={`text-sm font-bold ${status.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+              {status.message}
+            </div>
+          )}
 
-          <input
-            type="email"
-            name="email"
-            placeholder="ton@email.com"
-            className="input input-bordered w-full"
-            required
-          />
-
-          <textarea
-            name="message"
-            placeholder="Ton message…"
-            rows="5"
-            className="textarea textarea-bordered w-full"
-            required
-          />
-
-          {success && <p className="text-success">{success}</p>}
-          {error && <p className="text-error">{error}</p>}
-
-          <button className="btn btn-secondary text-white">
-            Envoyer le message
+          <button 
+            type="submit" 
+            disabled={loading}
+            className="btn btn-primary rounded-full px-12 text-white shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all border-none"
+          >
+            {loading ? <span className="loading loading-dots"></span> : 'Envoyer'}
           </button>
-
         </form>
       </div>
     </section>
   )
 }
-
-export default Contact
-
-
