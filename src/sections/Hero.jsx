@@ -53,10 +53,7 @@ export default function Hero() {
             >
               Voir le CV
             </a>
-            
-            <a href="#contact" className="btn btn-ghost text-primary font-bold">
-              Me recruter
-            </a>
+          
           </div>
         </div>
       </div>
