@@ -29,11 +29,11 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="mt-6 p-4 bg-primary/5 border-l-4 border-primary max-w-2xl">
-          <p className="text-slate-700">
-            🎓 Admise en <strong>3ème année de Bachelor Développeur Full-Stack</strong> à l'<strong>ETNA Paris</strong>, je suis actuellement à la recherche d'une <strong>alternance</strong> pour mettre mes compétences au service de votre équipe.
-          </p>
-        </div>
+     <div className="mt-6 p-4 bg-primary/5 border-l-4 border-primary max-w-2xl">
+  <p className="text-slate-700">
+    🎓 Titulaire du <strong>Titre Professionnel Développeur Web et Web Mobile (Bac+2)</strong>, et admise en <strong>3ème année de Bachelor Développeur Full-Stack</strong> à l'<strong>ETNA Paris</strong>, je suis à la recherche d'une <strong>alternance à partir d'octobre 2026</strong> pour contribuer à des projets web innovants et poursuivre mon évolution professionnelle.
+  </p>
+</div>
 
         <div className="mt-12 pt-10 border-t border-slate-100">
           <div className="flex flex-wrap gap-4 mt-8">
