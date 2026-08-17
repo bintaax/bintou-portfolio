@@ -2,6 +2,16 @@ import React from 'react';
 
 export default function Projects() {
   const projectList = [
+     {
+      title: "Lectis 2.0",
+      description: "Refonte de mon projet Lectis avec React. Application web permettant de rechercher et consulter des livres grâce à l'API Google Books, avec une interface responsive et accessible.",
+      tech: [
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      ],
+      demo: "https://lectisv2.netlify.app",
+      github: "https://github.com/bintaax/lectis2.0" 
+    },
     {
       title: "Lectis",
       description: "Plateforme e-commerce complète (Librairie en ligne). Gestion du catalogue, panier dynamique, tunnel de commande, authentification et espace client.",
