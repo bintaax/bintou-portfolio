@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="py-6 text-center text-sm text-gray-400">
-      © {new Date().getFullYear()} Bintou — Tous droits réservés
+      © {new Date().getFullYear()} Bintou Sylla — Tous droits réservés
     </footer>
   )
 }

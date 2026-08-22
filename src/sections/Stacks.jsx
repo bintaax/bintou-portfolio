@@ -8,7 +8,7 @@ export default function Stacks() {
         { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
         { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
         { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-        { name: "React (Débutant)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
         { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
       ]
     },
@@ -50,8 +50,8 @@ export default function Stacks() {
               <div className="flex flex-wrap gap-6">
                 {cat.skills.map((skill, i) => (
                   <div key={i} className="flex items-center gap-3 group">
-                    <img src={skill.icon} alt={skill.name} className="w-7 h-7 grayscale group-hover:grayscale-0 transition-all duration-300" />
-                    <span className="text-sm font-semibold text-slate-600 group-hover:text-primary transition-colors italic">
+                    <img src={skill.icon} alt={skill.name} className="w-7 h-7" />
+                    <span className="text-sm font-semibold italic">
                       {skill.name}
                     </span>
                   </div>

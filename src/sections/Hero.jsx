@@ -10,15 +10,15 @@ export default function Hero() {
         </h2>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 mb-6">
-          Développeuse Full-Stack
+          Développeuse web junior
         </h1>
 
-        <div className="text-base sm:text-lg max-w-2xl min-h-[3rem] text-slate-700">
+        <div className="text-base sm:text-lg max-w-2xl min-h-12 text-slate-700">
           <p>
             Ce qui me motive ?{" "}
             <span className="text-primary font-bold">
               <Typewriter 
-                words={["Relever des défis techniques", "Concevoir des solutions Full-Stack", "Apporter une expérience utilisateur intuitive"]} 
+                words={["Développer des interfaces web modernes", "Créer des applications avec React et Symfony", "Concevoir des expériences accessibles et intuitives", "Transformer des idées en solutions web concrètes"]} 
                 loop 
                 cursor 
                 typeSpeed={50} 
@@ -29,33 +29,44 @@ export default function Hero() {
           </p>
         </div>
 
-     <div className="mt-6 p-4 bg-primary/5 border-l-4 border-primary max-w-2xl">
+<div className="mt-6 p-4 bg-primary/5 border-l-4 border-primary max-w-2xl">
   <p className="text-slate-700">
-    🎓 Titulaire du <strong>Titre Professionnel Développeur Web et Web Mobile (Bac+2)</strong>, et admise en <strong>3ème année de Bachelor Développeur Full-Stack</strong> à l'<strong>ETNA Paris</strong>, je suis à la recherche d'une <strong>alternance à partir d'octobre 2026</strong> pour contribuer à des projets web innovants et poursuivre mon évolution professionnelle.
+    🎓 Titulaire du <strong>Titre Professionnel Développeur Web et Web Mobile (Bac+2)</strong>
+    et admise en <strong>3ème année de Bachelor Développeur Full-Stack</strong> à l'
+    <strong>ETNA Paris</strong>, je conçois des applications web en combinant
+    <strong> développement, intégration et expérience utilisateur</strong>.
   </p>
 </div>
 
-        <div className="mt-12 pt-10 border-t border-slate-100">
-          <div className="flex flex-wrap gap-4 mt-8">
-            <a 
-              href="/CV-BintouSYLLA.pdf" 
-              download 
-              className="btn btn-primary text-white shadow-md hover:shadow-lg transition-all px-8"
-            >
-              Télécharger mon CV
-            </a>
+<div className="mt-4 max-w-2xl">
+  <p className="text-sm text-slate-600">
+    📍 <strong>Basée en Île-de-France</strong> · Ouverte au télétravail et à la mobilité
+  </p>
+</div>
+<div className="mt-12 pt-10 border-t border-slate-100">
+  <p className="text-sm text-slate-500 mb-5">
+    Découvrez mon parcours et mes compétences à travers mon CV.
+  </p>
 
-            <a 
-              href="/CV-BintouSYLLA.pdf" 
-              target="_blank" 
-              rel="noreferrer"
-              className="btn btn-outline border-slate-300 text-slate-600 hover:bg-slate-50 hover:text-slate-900"
-            >
-              Voir le CV
-            </a>
-          
-          </div>
-        </div>
+  <div className="flex flex-wrap gap-4">
+    <a
+      href="/CV-BintouSYLLA.pdf"
+      download
+      className="btn btn-primary text-white shadow-md hover:shadow-lg transition-all px-8"
+    >
+      Télécharger mon CV
+    </a>
+
+    <a
+      href="/CV-BintouSYLLA.pdf"
+      target="_blank"
+      rel="noreferrer"
+      className="btn btn-outline border-slate-300 text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+    >
+      Voir le CV
+    </a>
+  </div>
+</div>
       </div>
     </section>
   );
