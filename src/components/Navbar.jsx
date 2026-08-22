@@ -42,16 +42,6 @@ function Navbar() {
                 </a>
               </li>
 
-                <li>
-                <a
-                  href="#cv"
-                  className="flex justify-between items-center"
-                >
-                  CV
-                  <ArrowUpRight size={16} />
-                </a>
-              </li>
-
               <li>
                 <a
                   href="#contact"
